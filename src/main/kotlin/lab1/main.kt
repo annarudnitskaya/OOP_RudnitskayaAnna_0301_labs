@@ -1,6 +1,6 @@
 package lab1
 
-data class Book(val number: String, val name: String, val authors: String) {}
+data class Book(val number: String, val name: String, val authors: String, val yearBook: String) {}
 
 fun parserBooks(books: String): List<Book>? {
     if (books.isEmpty()) { return null }
@@ -17,13 +17,13 @@ fun parserBooks(books: String): List<Book>? {
     return listBooks
 }
 
-fun oldestBook(){}
+fun oldestBook(books: List<Book>): Book? { return books.minByOrNull { it.yearBook }}
 
-fun youngestBook(){}
+fun youngestBook(books: List<Book>): Book? { return books.maxByOrNull { it.yearBook }}
 
-fun longestNameBook(){}
+fun longestNameBook(books: List<Book>): Book? { return books.maxByOrNull { it.name.length }}
 
-fun shortestNameBook(){}
+fun shortestNameBook(books: List<Book>): Book? { return books.minByOrNull { it.name.length }}
 
 fun main() {
     val books = "1. Отцы и дети // И.С.Тургенев // 1862\n"+
@@ -32,10 +32,10 @@ fun main() {
             "4. Евгений Онегин // А.С.Пушкин // 1833\n".trimIndent()
     val listBooks: List<Book>? = parserBooks(books)
     if (listBooks !=null) {
-        println("The oldest book is: ${oldestBook()}")
-        println("The youngest book is: ${oldestBook()}")
-        println("The longest name of the book is: ${oldestBook()}")
-        println("The shortest name of the book is: ${oldestBook()}")
+        println("The oldest book was published: ${oldestBook(listBooks)}")
+        println("The youngest book was published: ${oldestBook(listBooks)}")
+        println("The longest name of the book is: ${oldestBook(listBooks)}")
+        println("The shortest name of the book is: ${oldestBook(listBooks)}")
 
     }
 
