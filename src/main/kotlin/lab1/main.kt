@@ -14,5 +14,4 @@ fun main() {
     } else {
         println("List of the books is empty")
     }
-
 }
