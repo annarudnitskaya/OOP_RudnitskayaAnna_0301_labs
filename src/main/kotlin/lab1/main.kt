@@ -7,10 +7,10 @@ fun main() {
             "4. Евгений Онегин // А.С.Пушкин // 1833\n".trimIndent()
     val listBooks: List<Book>? = parserBooks(books)
     if (listBooks !=null) {
-        println("The oldest book was published: ${oldestBook(listBooks)}")
-        println("The youngest book was published: ${youngestBook(listBooks)}")
-        println("The longest name of the book is: ${longestNameBook(listBooks)}")
-        println("The shortest name of the book is: ${shortestNameBook(listBooks)}")
+        if (oldestBook(listBooks)!=null) println("The oldest book was published: ${oldestBook(listBooks)}")
+        if (youngestBook(listBooks)!=null) println("The youngest book was published: ${youngestBook(listBooks)}")
+        if (longestNameBook(listBooks)!=null) println("The longest name of the book is: ${longestNameBook(listBooks)}")
+        if (shortestNameBook(listBooks)!=null) println("The shortest name of the book is: ${shortestNameBook(listBooks)}")
     } else {
         println("List of the books is empty")
     }

@@ -8,7 +8,7 @@ fun parserBooks(books: String): List<Book>? {
     val listBooks = mutableListOf<Book>()
     for (str in splitString) {
         val number = books.substringBefore('.').toInt()
-        val name = books.substringBeforeLast('.').substringAfter("//")
+        val name = books.substringBefore("//").substringAfter('.')
         val author = books.substringBeforeLast("//").substringAfter("//")
         val yearBook = books.substringAfterLast("//").toInt()
         val fullBook = Book(number, name, author, yearBook)
