@@ -17,7 +17,7 @@ fun parserBooks(books: String): List<Book>? {
     return listBooks
 }
 
-fun oldestBook(books: List<Book>): Book? { return books.minByOrNull { it.yearBook }}
-fun youngestBook(books: List<Book>): Book? { return books.maxByOrNull { it.yearBook }}
-fun longestNameBook(books: List<Book>): Book? { return books.maxByOrNull { it.name.length }}
-fun shortestNameBook(books: List<Book>): Book? { return books.minByOrNull { it.name.length }}
+fun oldestBook(books: List<Book>): Book? = books.minByOrNull { it.yearBook }
+fun youngestBook(books: List<Book>): Book? = books.maxByOrNull { it.yearBook }
+fun longestNameBook(books: List<Book>): Book? = books.maxByOrNull { it.name.length }
+fun shortestNameBook(books: List<Book>): Book? = books.minByOrNull { it.name.length }

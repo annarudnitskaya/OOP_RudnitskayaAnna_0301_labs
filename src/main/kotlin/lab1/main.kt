@@ -8,9 +8,9 @@ fun main() {
     val listBooks: List<Book>? = parserBooks(books)
     if (listBooks !=null) {
         println("The oldest book was published: ${oldestBook(listBooks)}")
-        println("The youngest book was published: ${oldestBook(listBooks)}")
-        println("The longest name of the book is: ${oldestBook(listBooks)}")
-        println("The shortest name of the book is: ${oldestBook(listBooks)}")
+        println("The youngest book was published: ${youngestBook(listBooks)}")
+        println("The longest name of the book is: ${longestNameBook(listBooks)}")
+        println("The shortest name of the book is: ${shortestNameBook(listBooks)}")
     } else {
         println("List of the books is empty")
     }
